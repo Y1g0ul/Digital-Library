@@ -2,21 +2,19 @@
 created-dt: 2026-01-20 08:01
 tags:
   - review
-sr-due: 2026-01-24
-sr-interval: 3
+sr-due: 2026-02-01
+sr-interval: 8
 sr-ease: 250
 ---
 Это выделенное хранилище данных в [[docker]], которое существует отдельно от [[container]].
 
 
-| способs работы с данными | пример                                                                                   |
-| ------------------------ | ---------------------------------------------------------------------------------------- |
-| Проброс папки хоста      | `docker run -v /host/path:/container/path image`                                         |
-| Именованный том          | `docker run -v mydata:/container/path image`                                             |
-| Анонимный том            | `docker run -v /container/path image` или прям в [[docker]]file `VOLUME /container/path` |
+| способ работы с данными | пример                                                                                   |
+| ----------------------- | ---------------------------------------------------------------------------------------- |
+| Проброс папки хоста     | `docker run -v /host/path:/container/path image`                                         |
+| Именованный том         | `docker run -v mydata:/container/path image`                                             |
+| Анонимный том           | `docker run -v /container/path image` или прям в [[docker]]file `VOLUME /container/path` |
 
-
-```
 
 |Команда|Что делает|
 |---|---|
