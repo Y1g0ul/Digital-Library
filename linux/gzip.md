@@ -2,8 +2,8 @@
 created-dt: 2026-01-03 02:14
 tags:
   - review
-sr-due: 2026-01-27
-sr-interval: 5
+sr-due: 2026-02-07
+sr-interval: 11
 sr-ease: 246
 ---
 Утилита в [[Linux]] для сжатия. GNU- версия программы compress, созданная, что бы избежать патентных ограничений.
