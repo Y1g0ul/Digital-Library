@@ -2,8 +2,8 @@
 created-dt: 2025-11-25 11:41
 tags:
   - review
-sr-due: 2026-01-30
-sr-interval: 18
+sr-due: 2026-02-27
+sr-interval: 28
 sr-ease: 152
 ---
 Команда в [[git]] которая выполняет только 2 основные опперации:

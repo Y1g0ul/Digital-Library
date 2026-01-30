@@ -2,8 +2,8 @@
 created-dt: 2025-12-10 11:19
 tags:
   - review
-sr-due: 2026-01-30
-sr-interval: 29
+sr-due: 2026-04-13
+sr-interval: 73
 sr-ease: 250
 ---
 Команда в [[Linux]] которая выводит [[uid]], [[gid]], [[groups]]
