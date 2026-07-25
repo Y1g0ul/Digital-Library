@@ -2,8 +2,8 @@
 created-dt: 2025-12-05 08:58
 tags:
   - review
-sr-due: 2026-07-25
-sr-interval: 138
+sr-due: 2027-07-05
+sr-interval: 345
 sr-ease: 250
 ---
 Команда в [[Linux]] для создания директории.
