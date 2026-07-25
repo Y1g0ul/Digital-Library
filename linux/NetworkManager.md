@@ -2,8 +2,8 @@
 created-dt: 2026-07-23 12:51
 tags:
   - review
-sr-due: 2026-07-25
-sr-interval: 2
+sr-due: 2026-07-30
+sr-interval: 5
 sr-ease: 244
 ---
 Служба в [[Linux]] для управления сетевыми подключениями. Чаще всего используется в настольных дистрибутивах (Ubuntu Desktop, Fedora и др.) и может управлять Ethernet, Wi-Fi, VPN и другими типами подключений.
