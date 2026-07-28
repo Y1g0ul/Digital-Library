@@ -14,7 +14,7 @@ tags:
 - публикация [[docker]]-образа;
 - деплой.
 
-Pipeline
+[[Pipeline]]
 ├── Build Job
 ├── Test Job
 └── Deploy Job
