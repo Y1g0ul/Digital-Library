@@ -147,3 +147,129 @@ containers:
         value: "false"
 ```
 
+Файлик с самым важным для CI / CD
+
+``` yaml
+# Название Pipeline
+name: CI-CD Pipeline
+
+
+# Event / Trigger
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+
+  workflow_dispatch:
+
+
+# Переменные
+variables:
+  APP_ENV: production
+  VERSION: "1.0"
+
+
+# Jobs
+jobs:
+
+  # Сборка приложения
+  build:
+
+    # Где выполняется Job
+    runs-on: ubuntu-latest
+
+
+    # Последовательность действий
+    steps:
+
+      # Получить код
+      - name: Checkout code
+        uses: checkout-action
+
+
+      # Выполнить команду
+      - name: Install dependencies
+        run: |
+          npm install
+          npm build
+
+
+      # Переменные внутри Step
+      - name: Build
+        env:
+          NODE_ENV: production
+        run: npm run build
+
+
+
+    # Артефакты
+    artifacts:
+      paths:
+        - build/
+
+
+    # Кэш
+    cache:
+      key: dependencies
+      paths:
+        - node_modules/
+
+
+  # Тестирование
+  test:
+
+    needs:
+      - build
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Run tests
+        run: npm test
+
+
+
+  # Деплой
+  deploy:
+
+    needs:
+      - test
+
+
+    environment:
+      name: production
+
+
+    steps:
+
+      - name: Login registry
+        run: docker login
+
+
+      - name: Build Docker image
+        run: docker build -t app .
+
+
+      - name: Push image
+        run: docker push app
+
+
+      - name: Deploy
+        run: |
+          ssh server
+          docker compose up -d
+
+
+
+# Secrets
+secrets:
+
+  DATABASE_PASSWORD:
+    value: hidden
+
+  SSH_KEY:
+    value: hidden
+```
