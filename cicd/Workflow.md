@@ -29,3 +29,5 @@ GitHub Actions:
 
 GitLab CI:
 `.gitlab-ci.yml`
+
+При необходимости можно отключить
