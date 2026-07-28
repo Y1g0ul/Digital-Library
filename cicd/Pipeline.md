@@ -14,7 +14,7 @@ tags:
 - публикацию артефактов;
 - деплой.
 
-Git Push
+Git [[push]]
 ↓
 Pipeline
 ├── Build

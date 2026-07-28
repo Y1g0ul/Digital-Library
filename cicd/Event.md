@@ -18,7 +18,7 @@ git [[push]] origin main
 ↓
 Срабатывает Event `push`
 ↓
-Запускается Workflow
+Запускается [[Workflow]]
 ↓
-Выполняется Pipeline.
+Выполняется [[Pipeline]]
 
