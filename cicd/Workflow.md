@@ -35,12 +35,27 @@ GitLab CI:
 
 При необходимости можно отключить в интерфейсе сервиса, в описании [[commit]] указать `[actions skip]` или в самом [[YAML]] файле в [[Event]]s указать `workflow_dispatch` (ручной запуск).
 
-Для запуска последовательно используется параметр `workflow_run` в [[Event]].
+Для запуска последовательно используется параметр `workflow_run` в [[Event]]. И так же в зависимости от результата работы прошлого Workflow могут меняться [[Job]]s.
 ``` yaml
 on:
   workflow_run: # Allows you to run this workflow manually from the Actions tab
     workflows: [First Workflow]
     types:
       - completed
+        
+jobs:
+  success-command:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      run: echo "The Third Workflow has completed successfully!"
+
+  failure-command:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      run: echo "The Third Workflow has failed."
 ```
+
+
 
