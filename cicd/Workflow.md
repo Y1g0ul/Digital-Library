@@ -34,3 +34,13 @@ GitLab CI:
 `.gitlab-ci.yml`
 
 При необходимости можно отключить в интерфейсе сервиса, в описании [[commit]] указать `[actions skip]` или в самом [[YAML]] файле в [[Event]]s указать `workflow_dispatch` (ручной запуск).
+
+Для запуска последовательно используется параметр `workflow_run` в [[Event]].
+``` yaml
+on:
+  workflow_run: # Allows you to run this workflow manually from the Actions tab
+    workflows: [First Workflow]
+    types:
+      - completed
+```
+
