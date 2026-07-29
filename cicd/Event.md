@@ -2,6 +2,9 @@
 created-dt: 2026-07-28 11:52
 tags:
   - review
+sr-due: 2026-07-31
+sr-interval: 2
+sr-ease: 241
 ---
 Cобытие, которое запускает выполнение Pipeline (Workflow).
 
