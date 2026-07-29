@@ -2,8 +2,8 @@
 created-dt: 2026-01-02 03:50
 tags:
   - review
-sr-due: 2026-07-29
-sr-interval: 101
+sr-due: 2027-02-26
+sr-interval: 212
 sr-ease: 210
 ---
 Утилита в [[Linux]] для создания и извлечения архивов файлов и каталогов.
