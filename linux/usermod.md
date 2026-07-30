@@ -2,8 +2,8 @@
 created-dt: 2026-04-23 09:34
 tags:
   - review
-sr-due: 2026-07-30
-sr-interval: 59
+sr-due: 2026-12-25
+sr-interval: 148
 sr-ease: 250
 ---
 Команда в [[Linux]] для изменения параметров пользователя
