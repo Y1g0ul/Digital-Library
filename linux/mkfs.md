@@ -2,9 +2,9 @@
 created-dt: 2026-01-17 07:59
 tags:
   - review
-sr-due: 2026-08-01
-sr-interval: 118
-sr-ease: 250
+sr-due: 2026-09-29
+sr-interval: 59
+sr-ease: 230
 ---
 Утилита в [[Linux]] для создания файловой системы на разделе или диске.
 ``` shell
