@@ -2,9 +2,9 @@
 created-dt: 2026-07-14 14:46
 tags:
   - review
-sr-due: 2026-08-01
-sr-interval: 8
-sr-ease: 250
+sr-due: 2026-08-05
+sr-interval: 4
+sr-ease: 230
 ---
 Команда для настройки параметров [[git]] (имя пользователя, email, редактор, алиасы и другие настройки).
 ``` bash
