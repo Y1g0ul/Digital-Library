@@ -2,8 +2,8 @@
 created-dt: 2026-03-09 11:26
 tags:
   - review
-sr-due: 2026-08-03
-sr-interval: 74
+sr-due: 2027-01-20
+sr-interval: 170
 sr-ease: 230
 ---
 Утилита [[Linux]] для управления таблицей разделов GPT на дисках
