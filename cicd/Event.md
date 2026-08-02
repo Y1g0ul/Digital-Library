@@ -54,7 +54,7 @@ git [[push]] origin main
 | `registry_package`            | Публикация или изменение Package в GitHub Packages                                 |
 | `release`                     | Создание, публикация, изменение или удаление Release                               |
 | `repository_dispatch`         | Получение кастомного события от внешнего источника через API                       |
-| `schedule`                    | Наступление времени по расписанию `cron`                                           |
+| `schedule`                    | Наступление времени по расписанию [[cron]]                                         |
 | `status`                      | Изменение commit status                                                            |
 | `watch`                       | Пользователь поставил ⭐ репозиторию                                                |
 | `workflow_call`               | Вызов Workflow из другого Workflow                                                 |
