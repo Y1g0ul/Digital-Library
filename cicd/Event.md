@@ -25,3 +25,4 @@ git [[push]] origin main
 ↓
 Выполняется [[Pipeline]]
 
+
