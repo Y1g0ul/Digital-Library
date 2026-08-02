@@ -2,9 +2,9 @@
 created-dt: 2026-07-21 15:35
 tags:
   - review
-sr-due: 2026-08-02
-sr-interval: 2
-sr-ease: 190
+sr-due: 2026-08-03
+sr-interval: 1
+sr-ease: 170
 ---
 Команда  в [[Linux]] для управления правилами встроенного межсетевого экрана (Firewall) ядра Linux.
 
