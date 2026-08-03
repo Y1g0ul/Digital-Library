@@ -146,3 +146,23 @@ localhost:8080
 nft add rule ip nat prerouting tcp dport 80 redirect to :8080
 ```
 
+**`MASQUERADE`**
+Подменяет исходный [[networks/IP|IP]] динамическим адресом интерфейса. Часто используется для выхода локальной сети в интернет.
+```
+192.168.1.10
+      ↓
+Linux Server
+      ↓
+ Internet
+```
+
+``` bash
+nft add rule ip nat postrouting oifname "eth0" masquerade
+```
+
+**`SNAT`**
+Изменяет исходный IP на указанный адрес.
+``` bash
+nft add rule ip nat postrouting oifname "eth0" snat to 203.0.113.10
+```
+
