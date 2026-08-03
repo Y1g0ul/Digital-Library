@@ -105,4 +105,44 @@ nft list chain inet filter input
 
 nft -a list chain inet filter input
 # показать правила вместе с handle
+
+nft delete rule inet filter input handle 5
+# Удаление правила по handle
+
+nft flush chain inet filter input
+# Очистить цепочку
+
+nft flush table inet filter
+# Очистить таблицу
  ```
+
+
+**`DNAT`**
+Изменяет адрес назначения и используется для проброса портов.
+``` 
+SERVER:2222
+     ↓
+192.168.1.10:22
+```
+
+```
+``` bash
+nft add table ip nat
+
+nft 'add chain ip nat prerouting { type nat hook prerouting priority -100; }'
+
+nft add rule ip nat prerouting tcp dport 2222 dnat to 192.168.1.10:22
+```
+
+**`REDIRECT`**
+Перенаправляет трафик на другой порт этого же компьютера.
+``` 
+localhost:80
+      ↓
+localhost:8080
+```
+
+``` bash
+nft add rule ip nat prerouting tcp dport 80 redirect to :8080
+```
+
