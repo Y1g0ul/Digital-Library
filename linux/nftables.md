@@ -166,3 +166,110 @@ nft add rule ip nat postrouting oifname "eth0" masquerade
 nft add rule ip nat postrouting oifname "eth0" snat to 203.0.113.10
 ```
 
+**`Базовый Firewall`**
+``` bash
+nft add table inet filter
+# создать таблицу
+
+nft 'add chain inet filter input { type filter hook input priority 0; policy drop; }'
+# создать цепочку INPUT с политикой DROP
+
+nft add rule inet filter input tcp dport 22 accept
+# разрешить SSH
+
+nft add rule inet filter input tcp dport 80 accept
+# разрешить HTTP
+
+nft add rule inet filter input tcp dport 443 accept
+# разрешить HTTPS
+
+nft add rule inet filter input iifname "lo" accept
+# разрешить loopback
+
+nft add rule inet filter input ct state established,related accept
+# разрешить уже установленные соединения
+
+nft add rule inet filter input ip saddr 192.168.1.100 drop
+# заблокировать конкретный IP
+
+nft add rule inet filter input ip saddr 192.168.1.100 tcp dport 22 drop
+# заблокировать SSH от конкретного IP
+
+nft add rule inet filter input ip saddr 192.168.1.0/24 tcp dport 22 accept
+# разрешить SSH только из локальной сети
+
+nft add rule inet filter input udp dport 51820 accept
+# разрешить UDP-порт
+
+nft add rule inet filter input ip protocol icmp accept
+# разрешить ICMP
+```
+
+**`Работа с интерфейсами`**
+``` bash
+nft add rule inet filter input iifname "eth0" accept
+# разрешить весь входящий трафик через eth0
+
+nft add rule inet filter input iifname "eth0" tcp dport 22 accept
+# разрешить SSH только через eth0
+
+nft 'add chain inet filter output { type filter hook output priority 0; policy accept; }'
+# создать цепочку OUTPUT с разрешением исходящего трафика
+```
+
+**`Проброс портов`**
+``` bash
+nft add table ip nat
+# создать таблицу NAT
+
+nft 'add chain ip nat prerouting { type nat hook prerouting priority -100; }'
+# создать цепочку PREROUTING
+
+nft add rule ip nat prerouting tcp dport 2222 dnat to 192.168.1.10:22
+# пробросить порт 2222 на 192.168.1.10:22
+
+nft add rule ip nat prerouting tcp dport 80 redirect to :8080
+# перенаправить локальный порт 80 на 8080
+
+nft 'add chain ip nat postrouting { type nat hook postrouting priority 100; }'
+# создать цепочку POSTROUTING
+
+nft add rule ip nat postrouting oifname "eth0" masquerade
+# включить MASQUERADE при выходе через eth0
+
+nft add rule ip nat postrouting oifname "eth0" snat to 203.0.113.10
+# заменить исходный IP на указанный
+```
+
+**`Просмотр и управление`**
+``` bash
+nft list ruleset
+# показать всю конфигурацию
+
+nft list tables
+# показать таблицы
+
+nft list table inet filter
+# показать таблицу
+
+nft list chain inet filter input
+# показать цепочку
+
+nft -a list chain inet filter input
+# показать правила вместе с handle
+
+nft -a list ruleset
+# показать все правила вместе с handle
+
+nft delete rule inet filter input handle 5
+# удалить правило по handle
+
+nft flush chain inet filter input
+# очистить цепочку
+
+nft flush table inet filter
+# очистить таблицу
+
+nft monitor
+# наблюдать изменения конфигурации
+```
