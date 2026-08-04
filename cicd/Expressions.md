@@ -63,7 +63,6 @@ ${{ 'Hello' }}
 ```
 
 Пример:
-
 ```yaml
 if: ${{ github.ref == 'refs/heads/main' }}
 ```
@@ -73,7 +72,6 @@ if: ${{ github.ref == 'refs/heads/main' }}
 ### contains()
 
 Проверяет, содержит ли строка или массив значение.
-
 ```yaml
 ${{ contains(github.event_name, 'push') }}
 ```
@@ -81,7 +79,6 @@ ${{ contains(github.event_name, 'push') }}
 ### startsWith()
 
 Проверяет начало строки.
-
 ```yaml
 ${{ startsWith(github.ref, 'refs/heads/feature/') }}
 ```
@@ -89,7 +86,6 @@ ${{ startsWith(github.ref, 'refs/heads/feature/') }}
 ### endsWith()
 
 Проверяет конец строки.
-
 ```yaml
 ${{ endsWith(github.ref, '/main') }}
 ```
@@ -97,7 +93,6 @@ ${{ endsWith(github.ref, '/main') }}
 ### format()
 
 Подставляет значения в строку.
-
 ```yaml
 ${{ format('Hello {0}', github.actor) }}
 ```
@@ -105,25 +100,20 @@ ${{ format('Hello {0}', github.actor) }}
 ### join()
 
 Объединяет элементы массива в строку.
-
 ```yaml
 ${{ join(matrix.os, ', ') }}
 ```
 
 ### toJSON()
 
-Преобразует значение в JSON.
-
-Полезно для отладки Contexts:
-
+Преобразует значение в JSON. Полезно для отладки Contexts:
 ```yaml
 run: echo '${{ toJSON(github) }}'
 ```
 
 ### fromJSON()
 
-Преобразует JSON в значение GitHub Actions.
-
+Преобразует JSON в значение GitHub Actions. 
 Используется для преобразования строк в:
 - boolean
 - number
@@ -136,10 +126,7 @@ ${{ fromJSON(env.TIMEOUT) }}
 
 ### hashFiles()
 
-Создаёт SHA-256 hash набора файлов.
-
-Часто используется для определения изменений зависимостей:
-
+Создаёт SHA-256 hash набора файлов. Часто используется для определения изменений зависимостей:
 ```yaml
 ${{ hashFiles('**/package-lock.json') }}
 ```
@@ -147,7 +134,6 @@ ${{ hashFiles('**/package-lock.json') }}
 ### case()
 
 Проверяет условия по порядку и возвращает значение первого совпавшего условия.
-
 ```yaml
 ${{ case(
   github.ref == 'refs/heads/main', 'production',
@@ -159,7 +145,6 @@ ${{ case(
 ## Status check functions
 
 Используются в `if`.
-
 ```yaml
 success()     # предыдущие шаги успешны
 failure()     # какой-либо предыдущий шаг завершился ошибкой
@@ -168,23 +153,24 @@ always()      # выполнять всегда
 ```
 
 Пример:
-
 ```yaml
 - name: Send logs
   if: ${{ failure() }}
   run: ./send-logs.sh
 ```
 
+Мы так же можем задать `id` шагу что бы проверять конкретно его выполнение 
+``` bash
+
+```
 ## Object filters
 
 `*` позволяет выбрать свойство у всех элементов коллекции.
-
 ```yaml
 github.event.issue.labels.*.name
 ```
 
 Например, из списка:
-
 ```text
 bug
 help wanted
@@ -198,7 +184,6 @@ documentation
 В условиях значения автоматически приводятся к `true` или `false`.
 
 **Falsy:**
-
 ```text
 false
 0
