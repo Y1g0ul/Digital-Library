@@ -59,3 +59,16 @@ Organization
 
 `$GITHUB_REF` -  переменная окружения, которую GitHub Actions предоставляет процессу, выполняющему [[Step]]. Поэтому она доступна внутри `run`, но сама по себе не является GitHub Actions expression и не существует на этапе обработки YAML.
 `${{ github.ref }}` - GitHub Actions expression. GitHub Actions вычисляет её до запуска shell-команды и подставляет получившееся значение в команду.
+
+``` bash
+steps:
+  - name: Set variable
+    run: |
+      echo "NEW_CUSTOM_VAR=New Value" >> "$GITHUB_ENV"
+
+  - name: Use variable
+    run: |
+      echo "$NEW_CUSTOM_VAR"
+```
+
+`$GITHUB_ENV` используется для того, чтобы передать переменную в последующие steps.
