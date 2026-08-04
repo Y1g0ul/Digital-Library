@@ -160,8 +160,28 @@ always()      # выполнять всегда
 ```
 
 Мы так же можем задать `id` шагу что бы проверять конкретно его выполнение 
-``` bash
+``` yml
+name: Tenth Workflow
+on: [workflow_dispatch]
 
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display failure
+        id: error-step
+	    run: |
+		  echo "This is a test workflow that will always fail."
+		  exit 1
+
+	  - name: Another error_step
+		run: exit 1
+
+	  - name: Display error message
+	    if: ${{ failure() && steps.error-step.outcome == 'failure' }}
+		run: |
+		  echo "The previous step failed. Displaying error message."
+		  echo "Error: The test workflow has failed as expected."
 ```
 ## Object filters
 
