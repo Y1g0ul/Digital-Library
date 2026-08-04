@@ -6,7 +6,6 @@ tags:
 Значение, используемое для хранения настроек и данных [[Workflow]].
 
 **`Типы`**
-
 env
 → переменные окружения, заданные в Workflow.
 `${{ env.MY_VARIABLE }}`
@@ -38,12 +37,3 @@ Repository
 Organization
 
 Более низкий уровень имеет приоритет.
-
-## Запомнить
-
-`env` → переменные Workflow
-
-`vars` → Configuration Variables GitHub
-
-`github` → информация о запуске Workflow
-
