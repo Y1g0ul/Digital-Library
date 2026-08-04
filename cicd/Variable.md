@@ -57,5 +57,5 @@ Organization
 | `RUNNER_ARCH`        | Архитектура Runner: `X64`, `ARM64` и т.д.                           |
 | `RUNNER_ENVIRONMENT` | Тип Runner: `github-hosted` или `self-hosted`                       |
 
-`$GITHUB_REF` - переменная окружения, которую GitHub Actions передаёт runner'у.
-`${{ github.ref }}` - GitHub Actions expression, которую GitHub подставляет ещё до запуска [[bash]].
+`$GITHUB_REF` -  переменная окружения, которую GitHub Actions предоставляет процессу, выполняющему [[Step]]. Поэтому она доступна внутри `run`, но сама по себе не является GitHub Actions expression и не существует на этапе обработки YAML.
+`${{ github.ref }}` - GitHub Actions expression. GitHub Actions вычисляет её до запуска shell-команды и подставляет получившееся значение в команду.
