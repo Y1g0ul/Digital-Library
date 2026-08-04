@@ -2,6 +2,9 @@
 created-dt: 2026-08-03 01:48
 tags:
   - review
+sr-due: 2026-08-06
+sr-interval: 2
+sr-ease: 249
 ---
 ``` yaml
 on:
@@ -38,7 +41,7 @@ on:
 ${{ inputs.name }}
 ```
 
-Так же [[Workflow]] с [[Event]] workflow_dispatch (запуск руками через гуи или api) и repository_dispatch (запуска только через api)
+Так же [[Workflow]] с [[Event]] workflow_dispatch (запуск руками через gui или api) и repository_dispatch (запуска только через api)
 
 ``` yml
 name: Seventh Workflow
