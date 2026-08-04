@@ -37,3 +37,22 @@ Repository
 Organization
 
 Более низкий уровень имеет приоритет.
+
+| Variable             | Что содержит                                                        |
+| -------------------- | ------------------------------------------------------------------- |
+| `GITHUB_ACTOR`       | Пользователь или приложение, запустившее [[Workflow]]               |
+| `GITHUB_EVENT_NAME`  | Событие, которое запустило Workflow (`push`, `pull_request` и т.д.) |
+| `GITHUB_REF`         | Полный ref ветки или тега, запустившего Workflow                    |
+| `GITHUB_REF_NAME`    | Короткое имя ветки или тега                                         |
+| `GITHUB_REF_TYPE`    | Тип ref: `branch` или `tag`                                         |
+| `GITHUB_REPOSITORY`  | `owner/repository`                                                  |
+| `GITHUB_SHA`         | SHA коммита, запустившего Workflow                                  |
+| `GITHUB_WORKFLOW`    | Название Workflow                                                   |
+| `GITHUB_RUN_ID`      | Уникальный ID запуска Workflow                                      |
+| `GITHUB_RUN_NUMBER`  | Номер запуска Workflow                                              |
+| `GITHUB_RUN_ATTEMPT` | Номер попытки запуска при повторном запуске                         |
+| `GITHUB_JOB`         | ID текущего Job                                                     |
+| `GITHUB_WORKSPACE`   | Рабочая директория репозитория на Runner                            |
+| `RUNNER_OS`          | ОС Runner: `Linux`, `Windows` или `macOS`                           |
+| `RUNNER_ARCH`        | Архитектура Runner: `X64`, `ARM64` и т.д.                           |
+| `RUNNER_ENVIRONMENT` | Тип Runner: `github-hosted` или `self-hosted`                       |
