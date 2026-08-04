@@ -56,3 +56,6 @@ Organization
 | `RUNNER_OS`          | ОС Runner: `Linux`, `Windows` или `macOS`                           |
 | `RUNNER_ARCH`        | Архитектура Runner: `X64`, `ARM64` и т.д.                           |
 | `RUNNER_ENVIRONMENT` | Тип Runner: `github-hosted` или `self-hosted`                       |
+
+`$GITHUB_REF` - переменная окружения, которую GitHub Actions передаёт runner'у.
+`${{ github.ref }}` - GitHub Actions expression, которую GitHub подставляет ещё до запуска [[bash]].
