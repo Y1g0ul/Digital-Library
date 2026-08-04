@@ -18,7 +18,15 @@ Repository
 - development
 - staging
 - production
-У каждого Environment могут быть свои [[Variable]]s и Secrets. Причём Environment можно привязать к [[Job]]:
+У каждого Environment могут быть свои Secrets и [[Variable]]s. `vars`- это GitHub Actions context для [[Variable]]s, созданных в настройках GitHub.
+
+```
+${{ vars.APP_NAME }}
+```
+
+Если Variable `APP_NAME` создан на уровне Repository, он доступен workflow из этого репозитория.
+
+Если Variable создан внутри Environment, его значение становится доступно [[Job]], которая использует этот Environment.
 ``` yml
 jobs:
   deploy:
@@ -28,5 +36,5 @@ jobs:
     steps:
       - run: echo "${{ vars.APP_URL }}"
 ```
-Тогда [[Job]] получает настройки именно из `production`.
+[[Job]] получает настройки именно из `production`.
 
