@@ -46,3 +46,4 @@ Organization
 `vars` → Configuration Variables GitHub
 
 `github` → информация о запуске Workflow
+
