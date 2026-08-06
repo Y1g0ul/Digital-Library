@@ -9,24 +9,44 @@ Cпособ запустить один [[Job]] несколько раз
 - ОС;
 - конфигурациях;
 - других параметрах.
-
 ```yaml
+name: Test matrix
+on: push
+
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
-
     strategy:
       matrix:
-        os:
-          - ubuntu-latest
-          - windows-latest
-
-        node:
-          - 20
-          - 22
-
+        os: [windows-latest, ubuntu-latest]
+        node-version: [14, 16, 18] 
+    runs-on: ${{ matrix.os }}
     steps:
-      - name: Test
-        run: echo "Testing Node ${{ matrix.node }}"
+      - uses: actions/checkout@v7
+	  - name: Use Node.js ${{ matrix.node-version }}
+		uses: actions/setup-node@v7
+		with:
+		  node-version: ${{ matrix.node-version }}
+	  - run: node -v
 ```
 
+`include` - добавляет дополнительные комбинации  
+или значения к Matrix.
+``` bash
+include:
+  - os: ubuntu-latest
+    node: 24
+```
+Также `include` может добавлять дополнительные переменные:
+``` bash
+include:
+  - os: ubuntu-latest
+    node: 22
+    environment: production
+```
+
+`exclude` - исключает определённые комбинации из Matrix.
+``` bash
+exclude:
+  - os: windows-latest
+    node: 18
+```
