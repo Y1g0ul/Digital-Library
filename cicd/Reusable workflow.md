@@ -20,7 +20,7 @@ jobs:
     uses: owner/repository/.github/workflows/reusable.yml@main
 ```
 
-Передача [[Inputs]]
+**`Передача`** [[Inputs]]
 В reusable Workflow:
 ``` yml
 on:
@@ -44,7 +44,7 @@ jobs:
 ${{ inputs.title }}
 ```
 
-Передача [[Secrets]]
+**`Передача`** [[Secrets]]
 В reusable Workflow:
 ``` yml
 on:
@@ -65,3 +65,4 @@ jobs:
 ``` yml
 ${{ secrets.PASSWORD }}
 ```
+
