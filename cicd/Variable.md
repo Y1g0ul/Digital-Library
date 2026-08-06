@@ -2,6 +2,9 @@
 created-dt: 2026-08-04 10:35
 tags:
   - review
+sr-due: 2026-08-09
+sr-interval: 3
+sr-ease: 251
 ---
 Значение, используемое для хранения настроек и данных [[Workflow]].
 
