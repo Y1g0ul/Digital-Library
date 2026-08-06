@@ -66,3 +66,38 @@ jobs:
 ${{ secrets.PASSWORD }}
 ```
 
+**`Outputs`**
+Reusable Workflow может вернуть результат вызывающему Workflow.
+1. Step создаёт output
+``` yml
+steps:
+  - id: generate
+    run: echo "date=$(date)" >> $GITHUB_OUTPUT
+```
+
+2. Job передаёт output
+``` yml
+jobs:
+  generate:
+    outputs:
+      date: ${{ steps.generate.outputs.date }}
+```
+
+3. Workflow объявляет output
+``` yml
+on:
+  workflow_call:
+    outputs:
+      date:
+        value: ${{ jobs.generate.outputs.date }}
+```
+
+4. Вызывающий Workflow получает output
+``` yml
+${{ needs.call.outputs.date }}
+```
+
+[[Job]] должен иметь:
+``` yml
+needs: call
+```
