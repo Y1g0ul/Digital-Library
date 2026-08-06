@@ -2,6 +2,9 @@
 created-dt: 2026-08-04 09:47
 tags:
   - review
+sr-due: 2026-08-09
+sr-interval: 3
+sr-ease: 250
 ---
 Набор информации о текущем запуске [[Workflow]], которую GitHub Actions
 предоставляет во время выполнения. Используется через выражение `${{ context.property }}`
