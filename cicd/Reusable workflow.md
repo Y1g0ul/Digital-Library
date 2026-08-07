@@ -2,6 +2,9 @@
 created-dt: 2026-08-07 12:15
 tags:
   - review
+sr-due: 2026-08-10
+sr-interval: 3
+sr-ease: 250
 ---
 [[Workflow]], который можно вызывать из другого Workflow
 и использовать повторно. Позволяет вынести общую CI/CD-логику в отдельный Workflow.
