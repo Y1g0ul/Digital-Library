@@ -2,8 +2,8 @@
 created-dt: 2026-08-04 09:54
 tags:
   - review
-sr-due: 2026-08-08
-sr-interval: 3
+sr-due: 2026-08-19
+sr-interval: 9
 sr-ease: 250
 ---
 Выражение, которое GitHub Actions вычисляет во время выполнения [[Workflow]].
@@ -228,3 +228,4 @@ null
 >'Hello' == 'hello'  → true
 >```
 
+Что бы избежать прерывания [[Workflow]] нужно добавить `continue-on-error: true` на уровне [[Step]] или на уровне [[Job]]. 
