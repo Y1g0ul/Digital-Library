@@ -2,8 +2,8 @@
 created-dt: 2026-08-05 12:43
 tags:
   - review
-sr-due: 2026-08-09
-sr-interval: 3
+sr-due: 2026-08-19
+sr-interval: 9
 sr-ease: 250
 ---
 Файл или набор файлов, созданных во время выполнения [[Job]],
