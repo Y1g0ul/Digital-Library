@@ -2,8 +2,8 @@
 created-dt: 2026-07-23 12:51
 tags:
   - review
-sr-due: 2026-08-11
-sr-interval: 12
+sr-due: 2026-09-09
+sr-interval: 29
 sr-ease: 244
 ---
 Служба в [[Linux]] для управления сетевыми подключениями. Чаще всего используется в настольных дистрибутивах (Ubuntu Desktop, Fedora и др.) и может управлять Ethernet, Wi-Fi, VPN и другими типами подключений.
@@ -48,7 +48,7 @@ nmtui                                # текстовый интерфейс н�
 
 > **NetworkManager** обычно используется на настольных системах, а на серверах Ubuntu чаще применяется **`systemd-networkd`** через [[netplan]].
 
-Проблема долгого ожиания при включении. Большинству домашних машин и виртуозок служба `wait-online`не нужна и ее можно выключить.
+Проблема долгого ожиания при включении. Большинству домашних машин и виртуалок служба `wait-online`не нужна и ее можно выключить.
 ``` bash
 sudo systemctl mask NetworkManager-wait-online.service
 sudo systemctl mask systemd-networkd-wait-online.service
