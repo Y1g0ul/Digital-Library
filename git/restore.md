@@ -2,8 +2,8 @@
 created-dt: 2026-07-14 13:52
 tags:
   - review
-sr-due: 2026-08-12
-sr-interval: 9
+sr-due: 2026-08-30
+sr-interval: 18
 sr-ease: 210
 ---
 Команда для отмены изменений в файлах и восстановления их состояния из [[commit]] или `Staging Area`.
