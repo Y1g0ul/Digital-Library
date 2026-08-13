@@ -2,9 +2,9 @@
 created-dt: 2026-07-17 12:28
 tags:
   - review
-sr-due: 2026-08-13
-sr-interval: 3
-sr-ease: 190
+sr-due: 2026-08-15
+sr-interval: 2
+sr-ease: 170
 ---
 Команда в [[Linux]] для трассировки системных вызовов и сигналов [[процесс]]ов.
 ``` bash
