@@ -2,8 +2,8 @@
 created-dt: 2026-08-06 11:47
 tags:
   - review
-sr-due: 2026-08-12
-sr-interval: 2
+sr-due: 2026-08-19
+sr-interval: 6
 sr-ease: 230
 ---
 Cпособ запустить один [[Job]] несколько раз
@@ -46,7 +46,6 @@ include:
     node: 22
     environment: production
 ```
-
 `exclude` - исключает определённые комбинации из Matrix.
 ``` bash
 exclude:
