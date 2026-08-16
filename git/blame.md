@@ -2,9 +2,9 @@
 created-dt: 2026-07-16 12:31
 tags:
   - review
-sr-due: 2026-08-16
-sr-interval: 20
-sr-ease: 250
+sr-due: 2026-08-25
+sr-interval: 9
+sr-ease: 230
 ---
 Команда для просмотра информации о том, кто и когда изменил каждую строку файла в [[git]].
 ``` bash
