@@ -59,10 +59,8 @@ ssh-copy-id user@example.com
 # добавить публичный ключ в authorized_keys сервера
 ```
 
-### SSH config
-
+**`SSH config`**
 Позволяет сохранить параметры подключения:
-
 ```text
 Host myserver
     HostName 192.168.1.10
@@ -72,37 +70,31 @@ Host myserver
 ```
 
 После этого:
-
 ```bash
 ssh myserver
 # подключиться используя настройки из ~/.ssh/config
 ```
 
-### Проброс портов
-
+**`Проброс портов`**
 Локальный проброс:
-
 ```bash
 ssh -L 8080:127.0.0.1:80 user@server
 # localhost:8080 → server:80
 ```
 
 Удалённый проброс:
-
 ```bash
 ssh -R 8080:127.0.0.1:3000 user@server
 # server:8080 → локальный компьютер:3000
 ```
 
 SOCKS-прокси:
-
 ```bash
 ssh -D 1080 user@server
 # создать SOCKS-прокси на localhost:1080
 ```
 
 SSH состоит из двух основных частей:
-
 ```text
 ssh
 # клиент
@@ -112,7 +104,6 @@ sshd
 ```
 
 Проверить сервер:
-
 ```bash
 systemctl status ssh
 # статус SSH-сервера

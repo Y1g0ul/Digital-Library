@@ -274,28 +274,6 @@ sshd -t
 
 ---
 
-## Передача файлов
-
-### SCP
-
-```bash
-scp file.txt user@server:/tmp/
-```
-
-Скачать файл:
-
-```bash
-scp user@server:/tmp/file.txt .
-```
-
-### SFTP
-
-```bash
-sftp user@server
-```
-
----
-
 ## SSH-туннели
 
 SSH умеет пробрасывать сетевые соединения через зашифрованный канал.
@@ -360,69 +338,30 @@ journalctl -u sshd
 
 ## Частые ошибки
 
-### Connection refused
+**`Connection refused`**
 
 ```text
 ssh: connect to host ... port 22: Connection refused
 ```
 
 Обычно означает:
-
 - `sshd` не запущен;
-    
 - SSH слушает другой порт;
-    
 - сервис слушает не тот интерфейс.
-    
 
-### Connection timed out
+**`Connection timed out`**
 
 Обычно:
-
 - firewall блокирует порт;
-    
 - нет маршрута;
-    
 - сервер недоступен;
-    
 - неправильный IP.
-    
 
-### Permission denied (publickey)
+**`Permission denied (publickey)`**
 
 Обычно:
-
 - неправильный ключ;
-    
 - публичный ключ отсутствует в `authorized_keys`;
-    
 - неверные права на `.ssh`;
-    
 - используется неправильный пользователь.
-    
 
----
-
-## Что важно запомнить
-
-- SSH — безопасный протокол удалённого доступа.
-    
-- Работает обычно через `22/TCP`.
-    
-- Клиент — `ssh`.
-    
-- Сервер — `sshd`.
-    
-- Предпочтительный способ входа на сервер — SSH-ключи.
-    
-- Приватный ключ нельзя передавать другим.
-    
-- Публичный ключ хранится в `~/.ssh/authorized_keys`.
-    
-- Ключи серверов сохраняются в `~/.ssh/known_hosts`.
-    
-- Конфигурация клиента — `~/.ssh/config`.
-    
-- Конфигурация сервера — `/etc/ssh/sshd_config`.
-    
-- Для диагностики особенно полезны `ssh -vvv`, `ss`, `nc` и `journalctl`.
