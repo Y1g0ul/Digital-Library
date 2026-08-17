@@ -2,8 +2,8 @@
 created-dt: 2026-07-28 11:52
 tags:
   - review
-sr-due: 2026-08-17
-sr-interval: 12
+sr-due: 2026-09-15
+sr-interval: 29
 sr-ease: 241
 ---
 Cобытие, которое запускает выполнение [[Pipeline]] ([[Workflow]]).

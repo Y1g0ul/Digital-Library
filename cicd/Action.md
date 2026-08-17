@@ -2,8 +2,8 @@
 created-dt: 2026-07-29 12:25
 tags:
   - review
-sr-due: 2026-08-17
-sr-interval: 4
+sr-due: 2026-08-26
+sr-interval: 9
 sr-ease: 230
 ---
 Готовый переиспользуемый блок, который выполняет определенную задачу внутри [[Step]]. Вместо того чтобы писать команды вручную, можно использовать уже готовое [Action](https://github.com/marketplace?type=actions):
