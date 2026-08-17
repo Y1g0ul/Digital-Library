@@ -175,6 +175,26 @@ REMOTE HOST IDENTIFICATION HAS CHANGED!
 - возможна атака MITM.
 
 ---
+## SSH-сервер
+
+Обычно это:
+```text
+sshd
+```
+
+Именно `sshd` слушает входящие подключения.
+
+Проверить:
+```bash
+systemctl status ssh
+```
+
+или в некоторых системах:
+```bash
+systemctl status sshd
+```
+
+---
 ## Частые проблемы
 
 ### Connection refused
