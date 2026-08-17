@@ -23,6 +23,9 @@ ssh-keygen [ключи]
 ssh-keygen -t ed25519
 # создать пару ключей
 
+ssh-keygen -t ed25519 -f ~/.ssh/server2_ed25519
+# создать пару ключей с определенным названием 
+
 ssh-keygen -t ed25519 -C "user@example.com"
 # создать ключ с комментарием
 
