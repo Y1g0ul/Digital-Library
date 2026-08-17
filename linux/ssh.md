@@ -111,3 +111,32 @@ systemctl status ssh
 ss -tlnp | grep :22
 # проверить, слушается ли порт 22
 ```
+
+
+**`Connection refused`**
+
+```text
+ssh: connect to host ... port 22: Connection refused
+```
+
+Обычно означает:
+- `sshd` не запущен;
+- SSH слушает другой порт;
+- сервис слушает не тот интерфейс.
+
+**`Connection timed out`**
+
+Обычно:
+- firewall блокирует порт;
+- нет маршрута;
+- сервер недоступен;
+- неправильный IP.
+
+**`Permission denied (publickey)`**
+
+Обычно:
+- неправильный ключ;
+- публичный ключ отсутствует в `authorized_keys`;
+- неверные права на `.ssh`;
+- используется неправильный пользователь.
+
