@@ -2,8 +2,8 @@
 created-dt: 2026-05-10 15:35
 tags:
   - review
-sr-due: 2026-08-17
-sr-interval: 23
+sr-due: 2026-10-11
+sr-interval: 55
 sr-ease: 230
 ---
 Команда в [[Linux]] для вычислений и работы с числами с плавающей точкой
