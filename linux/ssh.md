@@ -175,8 +175,9 @@ REMOTE HOST IDENTIFICATION HAS CHANGED!
 - возможна атака MITM.
 
 ---
+## Частые проблемы
 
-**`Connection refused`**
+### Connection refused
 
 ```text
 ssh: connect to host ... port 22: Connection refused
@@ -187,7 +188,7 @@ ssh: connect to host ... port 22: Connection refused
 - SSH слушает другой порт;
 - сервис слушает не тот интерфейс.
 
-**`Connection timed out`**
+###  Connection timed out
 
 Обычно:
 - firewall блокирует порт;
@@ -195,7 +196,7 @@ ssh: connect to host ... port 22: Connection refused
 - сервер недоступен;
 - неправильный IP.
 
-**`Permission denied (publickey)`**
+###  Permission denied (publickey)
 
 Обычно:
 - неправильный ключ;
