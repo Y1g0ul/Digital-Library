@@ -72,7 +72,6 @@ Tasks: 381 total, 2 running, 379 sleeping, 0 stopped, 0 zombie
 |`st`|CPU-время, забранное гипервизором у виртуальной машины|
 
 Например:
-
 ```text
 97.1 id
 ```
