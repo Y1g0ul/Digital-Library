@@ -37,6 +37,7 @@ strace -o trace.log ls # Запись в файл
 strace -c ls # Статистика вызовов
 strace -e openat ls # Показать только обращения к файлам
 strace -e read,write cat file.txt
+strace -e trace=openat -s 200 ./my_app 2:2:1 2>&1 | grep -v '= -1' # если приложение не запускается и ты не понимаешь почему, а в логах пусто
 ```
 
 **`Часто встречающиеся системные вызовы`**
