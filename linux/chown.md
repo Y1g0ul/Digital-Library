@@ -2,9 +2,9 @@
 created-dt: 2026-01-06 01:51
 tags:
   - review
-sr-due: 2026-08-19
-sr-interval: 135
-sr-ease: 250
+sr-due: 2026-10-24
+sr-interval: 66
+sr-ease: 230
 ---
 Команда в [[Linux]] которая меняет владельца и группу файла 
 ``` bash
