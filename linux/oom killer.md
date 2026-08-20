@@ -86,13 +86,9 @@ cat /proc/<PID>/oom_score_adj
 Чем выше `oom_score`, тем больше вероятность, что процесс будет выбран.
 
 На оценку влияют:
-
 - сколько памяти использует процесс;
-    
 - его настройки `oom_score_adj`;
-    
 - некоторые свойства процесса.
-    
 
 ---
 
@@ -101,7 +97,6 @@ cat /proc/<PID>/oom_score_adj
 Позволяет увеличить или уменьшить вероятность убийства процесса.
 
 Диапазон:
-
 ```text
 -1000 ... 1000
 ```
@@ -123,7 +118,6 @@ echo -500 > /proc/1234/oom_score_adj
 ```
 
 Значение `-1000` обычно требует root:
-
 ```bash
 echo -1000 > /proc/1234/oom_score_adj
 ```
@@ -135,13 +129,11 @@ echo -1000 > /proc/1234/oom_score_adj
 ## Как выглядит OOM
 
 Часто приложение просто внезапно исчезает:
-
 ```text
 Killed
 ```
 
 Например:
-
 ```bash
 ./my-program
 Killed
@@ -150,25 +142,21 @@ Killed
 Но причина видна в логах ядра.
 
 Проверить:
-
 ```bash
 dmesg | grep -i oom
 ```
 
 или:
-
 ```bash
 journalctl -k | grep -i oom
 ```
 
 Также полезно:
-
 ```bash
 journalctl -k | grep -i "killed process"
 ```
 
 Пример сообщения:
-
 ```text
 Out of memory: Killed process 1234 (java) total-vm:...
 ```
@@ -184,7 +172,6 @@ Out of memory: Killed process 1234 (java) total-vm:...
 ### Global OOM
 
 Вся система исчерпала память:
-
 ```text
 Host
 ├── RAM закончилась
@@ -201,7 +188,6 @@ Host
 Это часто происходит в [[Docker]] и Kubernetes.
 
 Например:
-
 ```text
 Host RAM: 32 GB
 
@@ -219,23 +205,18 @@ OOM внутри cgroup
 ## Docker и OOM
 
 Например:
-
 ```bash
 docker run --memory=512m nginx
 ```
 
-Контейнеру разрешено использовать максимум 512 MB.
-
-Если процесс внутри превышает лимит, он может быть убит OOM Killer.
+Контейнеру разрешено использовать максимум 512 MB. Если процесс внутри превышает лимит, он может быть убит OOM Killer.
 
 Проверить контейнер:
-
 ```bash
 docker inspect <container>
 ```
 
 Часто Docker показывает:
-
 ```text
 OOMKilled: true
 ```
@@ -249,7 +230,6 @@ OOMKilled: true
 [[systemd]] тоже может управлять памятью процессов через cgroups.
 
 Например, для сервиса можно задать:
-
 ```ini
 MemoryMax=1G
 ```
@@ -257,7 +237,6 @@ MemoryMax=1G
 Тогда сервис и его дочерние процессы не смогут использовать больше 1 GB памяти.
 
 Посмотреть ограничения:
-
 ```bash
 systemctl show <service> | grep Memory
 ```
