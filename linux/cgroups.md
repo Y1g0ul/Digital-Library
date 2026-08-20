@@ -50,14 +50,10 @@ cgroups образуют иерархию:
 Каждая cgroup может содержать:
 - процессы;
 - дочерние cgroups;
-    
 - настройки ограничений;
-    
 - статистику использования ресурсов.
-    
 
 Посмотреть:
-
 ```bash
 ls /sys/fs/cgroup
 # посмотреть корень cgroupfs
@@ -76,14 +72,12 @@ systemd-cgtop
 Современные Linux обычно используют **cgroup v2** — единую иерархию для всех типов ресурсов.
 
 Проверить:
-
 ```bash
 stat -fc %T /sys/fs/cgroup
 # cgroup2fs означает cgroup v2
 ```
 
 Или:
-
 ```bash
 mount | grep cgroup
 # посмотреть смонтированную cgroupfs
@@ -96,14 +90,12 @@ mount | grep cgroup
 Каждый процесс принадлежит какой-либо cgroup.
 
 Посмотреть для текущего shell:
-
 ```bash
 cat /proc/self/cgroup
 # показать cgroup текущего процесса
 ```
 
 Для другого процесса:
-
 ```bash
 cat /proc/<PID>/cgroup
 # показать cgroup процесса
@@ -120,7 +112,6 @@ memory.max
 ```
 
 Например:
-
 ```bash
 cat /sys/fs/cgroup/<group>/memory.max
 # посмотреть лимит памяти
@@ -130,7 +121,6 @@ cat /sys/fs/cgroup/<group>/memory.current
 ```
 
 Если процесс превысит лимит и память нельзя освободить, может сработать [[OOM Killer]] внутри этой cgroup.
-
 ```text
 Host RAM: 32 GB
 
@@ -148,13 +138,11 @@ cgroup OOM
 ## Ограничение CPU
 
 В cgroup v2 используется:
-
 ```text
 cpu.max
 ```
 
 Например:
-
 ```text
 50000 100000
 ```
@@ -170,7 +158,6 @@ pids.max
 ```
 
 Например:
-
 ```bash
 cat /sys/fs/cgroup/<group>/pids.max
 # максимальное количество процессов
@@ -188,7 +175,6 @@ cat /sys/fs/cgroup/<group>/pids.current
 [[systemd]] активно использует cgroups и автоматически помещает сервисы в отдельные группы.
 
 Например:
-
 ```text
 nginx.service
       ↓
@@ -201,7 +187,6 @@ nginx master
 ```
 
 Посмотреть:
-
 ```bash
 systemctl status nginx
 # увидеть cgroup сервиса
@@ -211,7 +196,6 @@ systemd-cgls
 ```
 
 Для сервиса можно задавать ограничения:
-
 ```ini
 MemoryMax=1G
 CPUQuota=50%
@@ -225,13 +209,11 @@ TasksMax=100
 [[Docker]] использует cgroups для ограничения ресурсов контейнеров.
 
 Например:
-
 ```bash
 docker run --memory=512m --cpus=1 nginx
 ```
 
 Docker создаёт cgroup и задаёт:
-
 ```text
 RAM ≤ 512 MB
 CPU ≤ 1 CPU
@@ -251,7 +233,6 @@ CPU ≤ 1 CPU
 |`cgroups`|ограничивают и учитывают используемые ресурсы|
 
 Упрощённо:
-
 ```text
 Namespaces
 → что процесс видит
