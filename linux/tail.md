@@ -2,8 +2,8 @@
 created-dt: 2026-01-29 08:30
 tags:
   - review
-sr-due: 2026-08-21
-sr-interval: 123
+sr-due: 2027-06-25
+sr-interval: 308
 sr-ease: 250
 ---
 То же самое что и [[linux/head|head]] только о **нижних** строчках
