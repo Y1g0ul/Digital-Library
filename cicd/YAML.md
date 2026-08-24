@@ -2,8 +2,8 @@
 created-dt: 2026-07-29 12:21
 tags:
   - review
-sr-due: 2026-08-24
-sr-interval: 14
+sr-due: 2026-09-28
+sr-interval: 35
 sr-ease: 247
 ---
 YAML Ain't Markup Language - язык сериализации данных, используемый для хранения конфигурации в удобном для чтения виде.
