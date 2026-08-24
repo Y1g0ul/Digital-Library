@@ -2,9 +2,9 @@
 created-dt: 2026-08-17 09:31
 tags:
   - review
-sr-due: 2026-08-22
-sr-interval: 2
-sr-ease: 230
+sr-due: 2026-08-25
+sr-interval: 1
+sr-ease: 210
 ---
 SSH (Secure Shell) - сетевой протокол для безопасного удалённого подключения к другому компьютеру. SSH работает поверх [[TCP]]. Стандартный [[ports]] `22`.
 
