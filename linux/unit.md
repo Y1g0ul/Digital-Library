@@ -71,7 +71,6 @@ systemctl show nginx.service -p FragmentPath
 ## Структура `.service`
 
 Простой пример:
-
 ```ini
 [Unit]
 Description=My application
@@ -106,19 +105,16 @@ After=network.target
 ```
 
 означает:
-
 > запускать этот юнит после `network.target`.
 
 Важно: `After=` задаёт **только порядок**, но не заставляет другой юнит запускаться.
 
 Для зависимости используются, например:
-
 ```ini
 Requires=postgresql.service
 ```
 
 или:
-
 ```ini
 Wants=postgresql.service
 ```
@@ -132,7 +128,6 @@ Wants=postgresql.service
 ### `[Service]`
 
 Описывает сам процесс.
-
 ```ini
 [Service]
 ExecStart=/usr/bin/python3 /opt/app/app.py
@@ -153,7 +148,6 @@ Restart=on-failure
 |`Environment=`|переменные окружения|
 
 Например:
-
 ```ini
 User=www-data
 WorkingDirectory=/opt/app
@@ -166,20 +160,17 @@ ExecStart=/usr/bin/python3 app.py
 ### `[Install]`
 
 Определяет, что произойдёт при:
-
 ```bash
 systemctl enable
 ```
 
 Например:
-
 ```ini
 [Install]
 WantedBy=multi-user.target
 ```
 
 означает, что при включении автозапуска сервис будет привязан к:
-
 ```text
 multi-user.target
 ```
@@ -187,37 +178,31 @@ multi-user.target
 ## Управление юнитами
 
 Запустить:
-
 ```bash
 sudo systemctl start nginx.service
 ```
 
 Остановить:
-
 ```bash
 sudo systemctl stop nginx.service
 ```
 
 Перезапустить:
-
 ```bash
 sudo systemctl restart nginx.service
 ```
 
 Перечитать конфигурацию приложения без полного перезапуска:
-
 ```bash
 sudo systemctl reload nginx.service
 ```
 
 Посмотреть состояние:
-
 ```bash
 systemctl status nginx.service
 ```
 
 Расширение `.service` обычно можно не писать:
-
 ```bash
 systemctl status nginx
 ```
@@ -225,19 +210,16 @@ systemctl status nginx
 ## Автозапуск
 
 Добавить сервис в автозагрузку:
-
 ```bash
 sudo systemctl enable nginx
 ```
 
 Убрать:
-
 ```bash
 sudo systemctl disable nginx
 ```
 
 Одновременно включить автозапуск и запустить:
-
 ```bash
 sudo systemctl enable --now nginx
 ```
@@ -252,25 +234,21 @@ enable → запускать автоматически при загрузке
 ## Просмотр юнитов
 
 Все загруженные юниты:
-
 ```bash
 systemctl list-units
 ```
 
 Только сервисы:
-
 ```bash
 systemctl list-units --type=service
 ```
 
 Все установленные unit-файлы, включая неактивные:
-
 ```bash
 systemctl list-unit-files
 ```
 
 Например:
-
 ```bash
 systemctl list-unit-files --type=service
 ```
@@ -284,7 +262,6 @@ systemctl cat nginx
 Покажет основной unit-файл и все дополнительные override-файлы.
 
 Посмотреть зависимости:
-
 ```bash
 systemctl list-dependencies nginx
 ```
