@@ -269,7 +269,6 @@ systemctl list-dependencies nginx
 ## Изменение юнитов
 
 Не рекомендуется напрямую менять файлы из:
-
 ```bash
 /usr/lib/systemd/system/
 ```
@@ -277,20 +276,17 @@ systemctl list-dependencies nginx
 Пакет при обновлении может перезаписать изменения.
 
 Вместо этого:
-
 ```bash
 sudo systemctl edit nginx
 ```
 
 Например:
-
 ```ini
 [Service]
 Restart=always
 ```
 
 systemd создаст override-файл примерно здесь:
-
 ```text
 /etc/systemd/system/nginx.service.d/override.conf
 ```
@@ -298,7 +294,6 @@ systemd создаст override-файл примерно здесь:
 ## `daemon-reload`
 
 Если создать или вручную изменить unit-файл:
-
 ```bash
 sudo nano /etc/systemd/system/myapp.service
 ```
@@ -306,19 +301,16 @@ sudo nano /etc/systemd/system/myapp.service
 systemd ещё не знает об изменениях.
 
 Нужно выполнить:
-
 ```bash
 sudo systemctl daemon-reload
 ```
 
 После этого можно:
-
 ```bash
 sudo systemctl start myapp
 ```
 
 или:
-
 ```bash
 sudo systemctl enable --now myapp
 ```
@@ -328,13 +320,11 @@ sudo systemctl enable --now myapp
 ## Состояния юнита
 
 При:
-
 ```bash
 systemctl status nginx
 ```
 
 можно увидеть:
-
 ```text
 Loaded: loaded
 Active: active (running)
@@ -351,7 +341,6 @@ Active: active (running)
 |`deactivating`|сейчас останавливается|
 
 А состояние автозапуска может быть:
-
 ```text
 enabled
 disabled
@@ -359,18 +348,16 @@ static
 masked
 ```
 
-`static` — юнит нельзя напрямую включить через `enable`, обычно его запускает другой юнит.
+`static` - юнит нельзя напрямую включить через `enable`, обычно его запускает другой юнит.
 
-`masked` — запуск юнита полностью запрещён.
+`masked` - запуск юнита полностью запрещён.
 
 Запретить запуск:
-
 ```bash
 sudo systemctl mask nginx
 ```
 
 Вернуть возможность запуска:
-
 ```bash
 sudo systemctl unmask nginx
 ```
@@ -378,19 +365,16 @@ sudo systemctl unmask nginx
 ## Логи юнита
 
 Логи сервисов systemd обычно можно посмотреть через [[journalctl]]:
-
 ```bash
 journalctl -u nginx
 ```
 
 Последние записи:
-
 ```bash
 journalctl -u nginx -n 50
 ```
 
 Следить в реальном времени:
-
 ```bash
 journalctl -u nginx -f
 ```
@@ -411,7 +395,6 @@ systemd
 **systemd управляет системой через юниты.**
 
 Для обычной работы с сервисами чаще всего достаточно помнить:
-
 ```bash
 systemctl status SERVICE
 systemctl start SERVICE
@@ -426,7 +409,6 @@ journalctl -u SERVICE
 ```
 
 А после изменения unit-файла:
-
 ```bash
 sudo systemctl daemon-reload
 ```
