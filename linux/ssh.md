@@ -2,8 +2,8 @@
 created-dt: 2026-08-17 09:31
 tags:
   - review
-sr-due: 2026-08-26
-sr-interval: 5
+sr-due: 2026-09-07
+sr-interval: 12
 sr-ease: 230
 ---
 Команда в [[Linux]] для удалённого подключения к другим компьютерам и серверам по защищённому протоколу [[networks/SSH|SSH]].
