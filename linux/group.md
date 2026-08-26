@@ -2,8 +2,8 @@
 created-dt: 2026-01-05 02:44
 tags:
   - review
-sr-due: 2026-08-26
-sr-interval: 141
+sr-due: 2027-08-14
+sr-interval: 353
 sr-ease: 250
 ---
 `root:x:0:`
@@ -12,3 +12,5 @@ sr-ease: 250
 2. Пароль (обычно `x`, реальный хэш хранится в `/etc/gshadow`)  
 3. [[gid]] (Group ID)  
 4. Список пользователей (через запятую)  
+
+Выкуси паря
