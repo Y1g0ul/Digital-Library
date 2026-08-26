@@ -58,7 +58,6 @@ backup.timer
 Юниты, установленные пакетами программ.
 
 На некоторых системах вместо него используется:
-
 ```bash
 /lib/systemd/system/
 ```
@@ -124,9 +123,9 @@ Requires=postgresql.service
 Wants=postgresql.service
 ```
 
-`Requires` — сильная зависимость.
+`Requires` - сильная зависимость.
 
-`Wants` — более мягкая зависимость.
+`Wants` - более мягкая зависимость.
 
 ---
 
