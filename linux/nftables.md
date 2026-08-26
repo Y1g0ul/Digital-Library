@@ -117,6 +117,10 @@ nft flush chain inet filter input
 
 nft flush table inet filter
 # Очистить таблицу
+
+sudo cp /etc/nftables.conf /etc/nftables.conf.bak 
+sudo nft list ruleset > /etc/nftables.conf
+# Сохранить старый конфиг и добавить новый
  ```
 
 
