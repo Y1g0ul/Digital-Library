@@ -2,8 +2,8 @@
 created-dt: 2026-01-05 02:41
 tags:
   - review
-sr-due: 2026-08-28
-sr-interval: 141
+sr-due: 2027-08-16
+sr-interval: 353
 sr-ease: 250
 ---
 Файд /etc/passwd содержит
