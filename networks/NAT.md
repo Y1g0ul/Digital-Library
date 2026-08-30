@@ -2,8 +2,8 @@
 created-dt: 2026-06-21 11:02
 tags:
   - review
-sr-due: 2026-08-29
-sr-interval: 2
+sr-due: 2026-09-05
+sr-interval: 6
 sr-ease: 238
 ---
 **NAT (Network Address Translation)** - механизм преобразования [[networks/IP|IP]]-адресов в проходящих через маршрутизатор пакетах.
