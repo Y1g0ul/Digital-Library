@@ -2,8 +2,8 @@
 created-dt: 2026-02-05 11:36
 tags:
   - review
-sr-due: 2026-08-31
-sr-interval: 125
+sr-due: 2027-07-12
+sr-interval: 315
 sr-ease: 250
 ---
 Disk Free показывает свободное и занятое место на файловых системах [[Linux]]. Cмотрит на свободное место через файловую систему (метаданные VFS/superblock)
