@@ -2,8 +2,8 @@
 created-dt: 2025-12-16 08:56
 tags:
   - review
-sr-due: 2026-08-31
-sr-interval: 155
+sr-due: 2027-09-23
+sr-interval: 388
 sr-ease: 250
 ---
 Команда в [[Linux]] для создания ссылок на файлы и каталоги.
