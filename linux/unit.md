@@ -87,7 +87,6 @@ WantedBy=multi-user.target
 ### `[Unit]`
 
 Общие параметры юнита.
-
 ```ini
 [Unit]
 Description=My application
