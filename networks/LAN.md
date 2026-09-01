@@ -149,7 +149,7 @@ Wi-Fi
 
 ## Broadcast domain
 
-Обычная LAN на Layer 2 образует `broadcast domain` — область, внутри которой распространяются широковещательные Ethernet-кадры.
+Обычная LAN на Layer 2 образует `broadcast domain` - область, внутри которой распространяются широковещательные Ethernet-кадры.
 
 Например:
 ```text
