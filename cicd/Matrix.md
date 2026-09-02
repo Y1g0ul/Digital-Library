@@ -2,8 +2,8 @@
 created-dt: 2026-08-06 11:47
 tags:
   - review
-sr-due: 2026-09-02
-sr-interval: 14
+sr-due: 2026-10-04
+sr-interval: 32
 sr-ease: 230
 ---
 Cпособ запустить один [[Job]] несколько раз
