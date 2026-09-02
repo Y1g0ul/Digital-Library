@@ -2,6 +2,9 @@
 created-dt: 2026-08-24 19:42
 tags:
   - review
+sr-due: 2026-09-05
+sr-interval: 3
+sr-ease: 250
 ---
 Система в [[Linux]] для запуска команд от имени другого пользователя, чаще всего `root`, с учётом правил из `/etc/sudoers`.
 
@@ -21,7 +24,6 @@ sudo [ключи] <команда>
 |`-E`|сохранить переменные окружения|
 
 Примеры:
-
 ```bash
 sudo apt update
 # выполнить команду от root
@@ -107,7 +109,6 @@ sudo su -
 ```
 
 Обычно для root-сессии проще использовать:
-
 ```bash
 sudo -i
 ```
@@ -115,27 +116,23 @@ sudo -i
 ## sudoers
 
 Правила доступа хранятся в:
-
 ```text
 /etc/sudoers
 /etc/sudoers.d/
 ```
 
 Редактировать следует через:
-
 ```bash
 visudo
 # открыть sudoers с проверкой синтаксиса
 ```
 
 Общий формат правила:
-
 ```text
 USER HOST=(RUNAS_USER:RUNAS_GROUP) COMMAND
 ```
 
 Пример:
-
 ```text
 user ALL=(ALL:ALL) ALL
 ```
