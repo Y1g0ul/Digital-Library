@@ -2,9 +2,9 @@
 created-dt: 2026-06-16 10:28
 tags:
   - review
-sr-due: 2026-09-02
-sr-interval: 40
-sr-ease: 228
+sr-due: 2026-09-23
+sr-interval: 21
+sr-ease: 208
 ---
 Команда в [[Linux]] для отправки сообщений в системный журнал ([[rsyslog]]/[[journalctl]])
 
