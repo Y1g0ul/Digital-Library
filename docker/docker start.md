@@ -11,3 +11,4 @@ sr-ease: 250
 docker start [OPTIONS] CONTAINER [CONTAINER...]
 ```
 - `-i` - для подключения контейнера к терминалу.
+- `-a` — подключиться к `STDOUT` и `STDERR` контейнера и видеть его вывод
