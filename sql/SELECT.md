@@ -108,7 +108,6 @@ FROM users;
 ```
 
 Если в таблице:
-
 ```text
 Russia
 Russia
@@ -118,7 +117,6 @@ Japan
 ```
 
 результат будет:
-
 ```text
 Russia
 Germany
@@ -126,7 +124,6 @@ Japan
 ```
 
 Для нескольких столбцов уникальность проверяется по **комбинации их значений**:
-
 ```sql
 SELECT DISTINCT country, city
 FROM users;
@@ -140,7 +137,6 @@ FROM table;
 ```
 
 Например:
-
 ```sql
 SELECT DISTINCT name, age
 FROM users;
