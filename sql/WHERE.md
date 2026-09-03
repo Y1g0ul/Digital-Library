@@ -105,6 +105,45 @@ FROM users
 WHERE country != 'Russia';
 ```
 
+## IN
+
+`IN` используется, когда нужно проверить, входит ли значение в список допустимых значений.
+
+Вместо:
+```sql
+SELECT *
+FROM users
+WHERE country = 'Russia'
+   OR country = 'Germany'
+   OR country = 'Japan';
+```
+
+Можно написать короче:
+```sql
+SELECT *
+FROM users
+WHERE country IN ('Russia', 'Germany', 'Japan');
+```
+
+Для чисел:
+```sql
+SELECT *
+FROM users
+WHERE age IN (18, 20, 25);
+```
+
+## NOT IN
+
+`NOT IN` делает обратную проверку — значение **не должно входить** в список.
+
+```sql
+SELECT *
+FROM users
+WHERE country NOT IN ('Russia', 'Germany');
+```
+
+То есть будут выбраны все строки, где `country` имеет другое значение.
+
 ## Скобки
 
 При сложных условиях можно использовать скобки, чтобы явно указать порядок проверки:
