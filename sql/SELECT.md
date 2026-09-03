@@ -34,7 +34,6 @@ FROM users;
 |3|Kate|22|
 
 Запрос:
-
 ```sql
 SELECT name, age
 FROM users;
@@ -51,19 +50,16 @@ FROM users;
 ## SELECT без FROM
 
 `SELECT` можно использовать и без таблицы, например для вычислений:
-
 ```sql
 SELECT 2 + 2;
 ```
 
 Результат:
-
 ```text
 4
 ```
 
 Можно вывести обычное значение:
-
 ```sql
 SELECT 'Hello';
 ```
@@ -84,7 +80,6 @@ FROM users;
 ```
 
 Или для выражения:
-
 ```sql
 SELECT 2 + 2 AS result;
 ```
@@ -96,7 +91,6 @@ SELECT 2 + 2 AS result;
 |4|
 
 Слово `AS` для псевдонима столбца можно не писать:
-
 ```sql
 SELECT name username
 FROM users;
