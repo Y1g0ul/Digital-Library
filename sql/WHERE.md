@@ -2,9 +2,9 @@
 created-dt: 2026-09-03 12:44
 tags:
   - review
-sr-due: 2026-09-06
-sr-interval: 3
-sr-ease: 250
+sr-due: 2026-09-08
+sr-interval: 2
+sr-ease: 230
 ---
 Оператор SQL, который используется для фильтрации строк по заданному условию.
 
