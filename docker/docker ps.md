@@ -2,8 +2,8 @@
 created-dt: 2026-01-13 08:30
 tags:
   - review
-sr-due: 2026-09-06
-sr-interval: 143
+sr-due: 2027-08-30
+sr-interval: 358
 sr-ease: 250
 ---
 Команда для просмотра запущенных [[container]] в [[docker]].
