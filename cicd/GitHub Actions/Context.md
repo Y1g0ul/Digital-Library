@@ -16,9 +16,9 @@ sr-ease: 250
 - `secrets` - Секреты
 - `inputs` - Входные параметры workflow_dispatch / workflow_call
 - `runner` - Информация о [[Runner]]
-- `job` - Информация о текущем [[Job]]
+- `job` - Информация о текущем [[cicd/GitHub Actions/Job]]
 - `steps` - Информация о выполненных [[Step]]s
-- `needs` - Результаты и данные [[Job]], от которых зависит текущий [[Job]]
+- `needs` - Результаты и данные [[cicd/GitHub Actions/Job]], от которых зависит текущий [[cicd/GitHub Actions/Job]]
 - `matrix` - Значения текущей Matrix-конфигурации
 
 ``` yml

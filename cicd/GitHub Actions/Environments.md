@@ -29,7 +29,7 @@ ${{ vars.APP_NAME }}
 
 Если Variable `APP_NAME` создан на уровне Repository, он доступен workflow из этого репозитория.
 
-Если Variable создан внутри Environment, его значение становится доступно [[Job]], которая использует этот Environment.
+Если Variable создан внутри Environment, его значение становится доступно [[cicd/GitHub Actions/Job]], которая использует этот Environment.
 ``` yml
 jobs:
   deploy:
@@ -39,5 +39,5 @@ jobs:
     steps:
       - run: echo "${{ vars.APP_URL }}"
 ```
-[[Job]] получает настройки именно из `production`.
+[[cicd/GitHub Actions/Job]] получает настройки именно из `production`.
 

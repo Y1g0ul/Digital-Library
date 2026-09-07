@@ -105,7 +105,7 @@ on:
 ${{ needs.call.outputs.date }}
 ```
 
-[[Job]] должен иметь:
+[[cicd/GitHub Actions/Job]] должен иметь:
 ``` yml
 needs: call
 ```

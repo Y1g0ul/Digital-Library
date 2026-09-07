@@ -228,4 +228,4 @@ null
 >'Hello' == 'hello'  → true
 >```
 
-Что бы избежать прерывания [[Workflow]] нужно добавить `continue-on-error: true` на уровне [[Step]] или на уровне [[Job]]. 
+Что бы избежать прерывания [[Workflow]] нужно добавить `continue-on-error: true` на уровне [[Step]] или на уровне [[cicd/GitHub Actions/Job]]. 
