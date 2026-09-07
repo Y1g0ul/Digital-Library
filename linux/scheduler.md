@@ -259,7 +259,7 @@ kworker
 ksoftirqd
 ```
 
-Например [[kworker]] — обычная для scheduler задача, которой также нужно выделить CPU.
+Например [[kworker]] - обычная для scheduler задача, которой также нужно выделить CPU.
 
 ## Realtime scheduling
 
