@@ -264,7 +264,6 @@ ksoftirqd
 ## Realtime scheduling
 
 Linux поддерживает специальные realtime-политики планирования:
-
 ```text
 SCHED_FIFO
 SCHED_RR
@@ -277,13 +276,11 @@ Realtime-задачи могут иметь очень высокий приор
 ## Scheduler не понимает назначение программы
 
 Scheduler не думает:
-
 ```text
 PostgreSQL важнее Python
 ```
 
 Он принимает решения на основе параметров задачи:
-
 ```text
 state
 priority
@@ -299,7 +296,6 @@ load
 ## Связь с load average
 
 Если CPU занят, а много задач находятся в состоянии runnable:
-
 ```text
 CPU → process A
 
@@ -326,7 +322,6 @@ Processes / Threads
 ```
 
 Если задача начинает ждать ресурс:
-
 ```text
 process
    ↓
@@ -338,7 +333,6 @@ sleeping
 Она временно перестаёт конкурировать за CPU.
 
 Когда происходит нужное событие:
-
 ```text
 event
  ↓
@@ -352,7 +346,6 @@ scheduler
 ## Кратко
 
 **Scheduler** отвечает за:
-
 ```text
 выбор следующей runnable-задачи
         ↓
