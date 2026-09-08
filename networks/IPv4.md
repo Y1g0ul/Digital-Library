@@ -2,6 +2,9 @@
 created-dt: 2026-09-08 10:59
 tags:
   - review
+sr-due: 2026-09-10
+sr-interval: 2
+sr-ease: 239
 ---
 Internet Protocol version 4 - четвёртая версия протокола [[IP]]
 
@@ -147,8 +150,7 @@ MF
 
 Означает отсутствие конкретного IPv4-адреса.
 
-Например, используется устройством до получения адреса через [DHCP](https://chatgpt.com/g/g-p-6a34bab6c94c8191a0ad3487c64dc054-seti/c/DHCP).
-
+Например, используется устройством до получения адреса через [[DHCP]].
 ### Loopback
 
 ```text
