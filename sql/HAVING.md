@@ -2,6 +2,9 @@
 created-dt: 2026-09-08 13:20
 tags:
   - review
+sr-due: 2026-09-10
+sr-interval: 2
+sr-ease: 248
 ---
 HAVING - оператор [[SQL]], который используется для **фильтрации групп**, созданных с помощью [GROUP BY](GROUP BY).
 
