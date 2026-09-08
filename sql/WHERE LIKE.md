@@ -75,7 +75,7 @@ WHERE name NOT LIKE 'A%';
 
 ## ILIKE в PostgreSQL
 
-В [PostgreSQL](PostgreSQL) `LIKE` чувствителен к регистру.
+В PostgreSQL `LIKE` чувствителен к регистру.
 
 Для поиска без учета регистра используется `ILIKE`:
 ```sql
