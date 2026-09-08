@@ -2,8 +2,8 @@
 created-dt: 2026-08-04 09:47
 tags:
   - review
-sr-due: 2026-09-08
-sr-interval: 21
+sr-due: 2026-10-31
+sr-interval: 53
 sr-ease: 250
 ---
 Набор информации о текущем запуске [[Workflow]], которую GitHub Actions
@@ -16,9 +16,9 @@ sr-ease: 250
 - `secrets` - Секреты
 - `inputs` - Входные параметры workflow_dispatch / workflow_call
 - `runner` - Информация о [[Runner]]
-- `job` - Информация о текущем [[cicd/GitHub Actions/Job]]
+- `job` - Информация о текущем [[cicd/GitHub Actions/Job|Job]]
 - `steps` - Информация о выполненных [[Step]]s
-- `needs` - Результаты и данные [[cicd/GitHub Actions/Job]], от которых зависит текущий [[cicd/GitHub Actions/Job]]
+- `needs` - Результаты и данные [[cicd/GitHub Actions/Job|Job]], от которых зависит текущий [[cicd/GitHub Actions/Job|Job]]
 - `matrix` - Значения текущей Matrix-конфигурации
 
 ``` yml

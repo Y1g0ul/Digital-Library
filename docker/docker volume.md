@@ -2,9 +2,9 @@
 created-dt: 2026-01-20 08:01
 tags:
   - review
-sr-due: 2026-09-08
-sr-interval: 140
-sr-ease: 250
+sr-due: 2026-11-15
+sr-interval: 68
+sr-ease: 230
 ---
 Это выделенное хранилище данных в [[docker]], которое существует отдельно от [[container]].
 
