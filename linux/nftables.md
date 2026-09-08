@@ -24,13 +24,13 @@ Table
 
 Table - контейнер для цепочек и правил. Принадлежит определённому семейству сетевых протоколов.
 
-|Семейство|Назначение|
+|Семейство| Назначение    |
 |---|---|
-|`ip`|IPv4|
-|`ip6`|IPv6|
-|`inet`|IPv4 + IPv6|
-|`arp`|ARP|
-|`bridge`|Bridge-трафик|
+|`ip`| [[IPv4]]      |
+|`ip6`| [[IPv6]]      |
+|`inet`| IPv4 + IPv6   |
+|`arp`| ARP           |
+|`bridge`| Bridge-трафик |
 ``` bash
 nft add table inet filter       # создать таблицу
 nft list tables                 # показать таблицы
